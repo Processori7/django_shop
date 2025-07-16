@@ -7,3 +7,5 @@ class Categories(models.Model):
     
     class Meta:
         db_table = 'category'
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
