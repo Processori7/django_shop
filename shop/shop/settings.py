@@ -122,9 +122,9 @@ USE_TZ = True
 STATIC_URL = "static/" # Просто это url адрес, не влияет на расположение файлов
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static" #BASE_DIR сама изначально ссылается на папку shop
+    BASE_DIR / "static", #BASE_DIR сама изначально ссылается на папку shop
+    BASE_DIR.parent / "static" #BASE_DIR сама изначально ссылается на папку shop
 ] # Расположение статических файлов
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
