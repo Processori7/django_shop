@@ -20,13 +20,20 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from debug_toolbar.toolbar import debug_toolbar_urls
+from shop import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include('main.urls', namespace='main')), # Подключаю маршруты из приложения main
     path("catalog/", include('goods.urls', namespace='goods')) # Подключаю маршруты из приложения main
-] + debug_toolbar_urls()
+]
 
 # Добавляем обработку статических файлов
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
 
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += [
+        path('__debug__/', include(debug_toolbar.urls)),
+    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
