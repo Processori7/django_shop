@@ -7,13 +7,10 @@ from goods.models import Categories
 
 def index(request):
 
-    # Получил категории все
-    categories = Categories.objects.all()
 
     context = {
         "title":"Главная страница",
-        "content":"Home - магазин мебели",
-        "categories":categories
+        "content":"Home - магазин мебели"
     }
     return render(request, "main/index.html", context)
 

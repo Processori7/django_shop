@@ -32,3 +32,11 @@ class Products(models.Model):
     # Вывожу названия продуктов и их кол-во
     def __str__(self):
          return f"{self.name}. В наличии: ({self.quantity} шт.)"
+    
+    def display_id(self):
+        return f"{self.id:05}"
+    
+    def sell_price(self):
+        if self.discount:
+            return round(self.price -self.price * self.discount / 100, 2)
+        return self.price
