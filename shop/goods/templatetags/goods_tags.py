@@ -10,6 +10,6 @@ def tag_categories():
     return Categories.objects.all()
 
 # Простой тег для получения всех продуктов
-@register.simple_tag()
-def tag_products():
-    return Products.objects.all()
+# @register.simple_tag()
+# def tag_products():
+#     return Products.objects.all()

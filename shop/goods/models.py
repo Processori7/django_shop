@@ -28,6 +28,7 @@ class Products(models.Model):
         db_table = 'product'
         verbose_name = 'Продукт'
         verbose_name_plural = 'Продукты'
+        ordering = ("id",)
 
     # Вывожу названия продуктов и их кол-во
     def __str__(self):
