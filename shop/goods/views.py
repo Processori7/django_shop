@@ -18,7 +18,7 @@ def catalog(request, category_slug=None):
         goods = q_search(query)
     else:
         # Находим категорию по slug
-        category = get_list_or_404(Categories, slug=category_slug)
+        category = get_object_or_404(Categories, slug=category_slug)
         # Фильтруем товары по категории
         goods = Products.objects.filter(category=category)
 
