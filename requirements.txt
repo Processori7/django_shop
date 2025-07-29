@@ -2,3 +2,4 @@ Django
 pillow
 ipython
 django-debug-toolbar
+psycopg2
