@@ -26,7 +26,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include('main.urls', namespace='main')), # Подключаю маршруты из приложения main
-    path("catalog/", include('goods.urls', namespace='goods')) # Подключаю маршруты из приложения main
+    path("catalog/", include('goods.urls', namespace='goods')), # Подключаю маршруты из приложения main
+    path("users/", include('users.urls', namespace='users')) # Подключаю маршруты из приложения users
 ]
 
 # Добавляем обработку статических файлов
