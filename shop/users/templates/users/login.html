@@ -7,14 +7,25 @@
         <div class="row justify-content-center">
             <div class="col-md-6 bg-white p-4 mb-4 mx-3 rounded custom-shadow">
                 <h2 class="text-center mb-4">Авторизация</h2>
-                <form>
+                
+                <!-- Отображение ошибок формы -->
+                {% if form.non_field_errors %}
+                    <div class="alert alert-danger" role="alert">
+                        {% for error in form.non_field_errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                
+                <form action={% url "users:login" %} method="post">
+                    {% csrf_token %}
                     <div class="mb-3">
                         <label for="username" class="form-label">Имя пользователя</label>
-                        <input type="text" class="form-control" id="username" placeholder="Введите ваше имя пользователя" required>
+<input type="text" name="username" class="form-control" id="username" placeholder="Введите ваше имя пользователя" required>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Пароль</label>
-                        <input type="password" class="form-control" id="password" placeholder="Введите ваш пароль" required>
+<input type="password" name="password" class="form-control" id="password" placeholder="Введите ваш пароль" required>
                     </div>
                     <button type="submit" class="btn btn-dark btn-block">Войти</button>
                 </form>
@@ -27,10 +38,6 @@
                     <a href="#" class="btn btn-dark">
                         <img class="mx-1" src="{% static "deps/icons/google.svg" %}" alt="Catalog Icon" width="16" height="16">
                         Google
-                    </a>
-                    <a href="#" class="btn btn-dark">
-                        <img class="mx-1" src="{% static "deps/icons/facebook.svg" %}" alt="Catalog Icon" width="16" height="16">
-                        Facebook
                     </a>
                     <a href="#" class="btn btn-dark">
                         <img class="mx-1" src="{% static "deps/icons/facebook.svg" %}" alt="Catalog Icon" width="16" height="16">
