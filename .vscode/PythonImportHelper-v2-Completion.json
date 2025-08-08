@@ -385,6 +385,14 @@
         "documentation": {}
     },
     {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -581,6 +589,14 @@
         "documentation": {}
     },
     {
+        "label": "UserCreationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
         "label": "views",
         "importPath": "users",
         "description": "users",
@@ -590,6 +606,14 @@
     },
     {
         "label": "UserLoginForm",
+        "importPath": "users.forms",
+        "description": "users.forms",
+        "isExtraImport": true,
+        "detail": "users.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UserRegistrationForm",
         "importPath": "users.forms",
         "description": "users.forms",
         "isExtraImport": true,
@@ -1033,7 +1057,16 @@
         "kind": 6,
         "importPath": "shop.users.forms",
         "description": "shop.users.forms",
-        "peekOfCode": "class UserLoginForm(AuthenticationForm):\n    username = forms.CharField(\n        widget=forms.TextInput(attrs={\n            'class': 'form-control',\n            'placeholder': 'Введите имя пользователя'\n        })\n    )\n    password = forms.CharField(\n        widget=forms.PasswordInput(attrs={\n            'class': 'form-control',",
+        "peekOfCode": "class UserLoginForm(AuthenticationForm):\n    class Meta:\n        model = User\n        fields = ['username', 'password']\n    username = forms.CharField()\n    password = forms.CharField()\n    # username = forms.CharField(\n    #     label = 'Имя',\n    #     widget=forms.TextInput(attrs={\"autofocus\": True,\n    #                                   'class': 'form-control',",
+        "detail": "shop.users.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UserRegistrationForm",
+        "kind": 6,
+        "importPath": "shop.users.forms",
+        "description": "shop.users.forms",
+        "peekOfCode": "class UserRegistrationForm(UserCreationForm):\n    class Meta:\n        model = User\n        fields = (\n            \"first_name\",\n            \"last_name\",\n            \"username\",\n            \"email\",\n            \"password1\",\n            \"password2\",",
         "detail": "shop.users.forms",
         "documentation": {}
     },
@@ -1042,8 +1075,17 @@
         "kind": 6,
         "importPath": "shop.users.models",
         "description": "shop.users.models",
-        "peekOfCode": "class User(AbstractUser):\n    image = models.ImageField(upload_to=\"users_image\", null=True, blank=True, verbose_name=\"Аватар\")\n    class Meta:\n        db_table = 'user'\n        verbose_name = 'Пользователи'\n        verbose_name_plural = 'Пользователи'\n    # Вывожу названия категорий\n    def __str__(self):\n        return self.username",
+        "peekOfCode": "class User(AbstractUser):\n    image = models.ImageField(upload_to='users_images', blank=True, null=True, verbose_name='Аватар')\n    class Meta:\n        db_table = 'user'\n        verbose_name = 'Пользователя'\n        verbose_name_plural = 'Пользователи'\n    def __str__(self):\n        return self.username",
         "detail": "shop.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "shop.users.urls",
+        "description": "shop.users.urls",
+        "peekOfCode": "app_name = 'users'\nurlpatterns = [\n    path('login/', views.login, name='login'),\n    path('registration/', views.registration, name='registration'),\n    path('profile/', views.profile, name='profile'),\n    path('logout/', views.logout, name='logout'),\n]",
+        "detail": "shop.users.urls",
         "documentation": {}
     },
     {
@@ -1051,7 +1093,7 @@
         "kind": 5,
         "importPath": "shop.users.urls",
         "description": "shop.users.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"login/\", views.login, name=\"login\"),\n    path(\"registration/\", views.registration, name=\"registration\"),\n    path(\"profile/\", views.profile, name=\"profile\"),\n    path(\"logout/\", views.logout, name=\"logout\"),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('login/', views.login, name='login'),\n    path('registration/', views.registration, name='registration'),\n    path('profile/', views.profile, name='profile'),\n    path('logout/', views.logout, name='logout'),\n]",
         "detail": "shop.users.urls",
         "documentation": {}
     },
@@ -1060,7 +1102,7 @@
         "kind": 2,
         "importPath": "shop.users.views",
         "description": "shop.users.views",
-        "peekOfCode": "def login(request):\n    if request.method == 'POST':\n        form = UserLoginForm(data=request.POST)\n        if form.is_valid():\n            # Получаем данные из валидной формы\n            username = form.cleaned_data['username']\n            password = form.cleaned_data['password']\n            # Аутентифицируем пользователя\n            user = auth.authenticate(request, username=username, password=password)\n            if user is not None:",
+        "peekOfCode": "def login(request):\n    if request.method == 'POST':\n        form = UserLoginForm(data=request.POST)\n        if form.is_valid():\n            username = request.POST['username']\n            password = request.POST['password']\n            user = auth.authenticate(username=username, password=password)\n            if user:\n                auth.login(request, user)\n                return HttpResponseRedirect(reverse('main:index'))",
         "detail": "shop.users.views",
         "documentation": {}
     },
@@ -1069,7 +1111,7 @@
         "kind": 2,
         "importPath": "shop.users.views",
         "description": "shop.users.views",
-        "peekOfCode": "def registration(request):\n    context = {\n        'title': 'Home - Регистрация'\n    }\n    return render(request, 'users/registration.html', context)\ndef profile(request):\n    context = {\n        'title': 'Home - Кабинет'\n    }\n    return render(request, 'users/profile.html', context)",
+        "peekOfCode": "def registration(request):\n    if request.method == 'POST':\n        form = UserRegistrationForm(data=request.POST)\n        if form.is_valid():\n            form.save()\n            user = form.instance\n            auth.login(request, user)\n            return HttpResponseRedirect(reverse('main:index'))\n    else:\n        form = UserRegistrationForm()",
         "detail": "shop.users.views",
         "documentation": {}
     },
@@ -1078,7 +1120,7 @@
         "kind": 2,
         "importPath": "shop.users.views",
         "description": "shop.users.views",
-        "peekOfCode": "def profile(request):\n    context = {\n        'title': 'Home - Кабинет'\n    }\n    return render(request, 'users/profile.html', context)\ndef logout(request):\n    auth.logout(request)\n    return HttpResponseRedirect(reverse('main:index'))",
+        "peekOfCode": "def profile(request):\n    context = {\n        'title': 'Home - Кабинет'\n    }\n    return render(request, 'users/profile.html', context)\ndef logout(request):\n    auth.logout(request)\n    return redirect(reverse('main:index'))",
         "detail": "shop.users.views",
         "documentation": {}
     },
@@ -1087,7 +1129,7 @@
         "kind": 2,
         "importPath": "shop.users.views",
         "description": "shop.users.views",
-        "peekOfCode": "def logout(request):\n    auth.logout(request)\n    return HttpResponseRedirect(reverse('main:index'))",
+        "peekOfCode": "def logout(request):\n    auth.logout(request)\n    return redirect(reverse('main:index'))",
         "detail": "shop.users.views",
         "documentation": {}
     },
