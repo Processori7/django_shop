@@ -217,6 +217,14 @@
         "documentation": {}
     },
     {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "AppConfig",
         "importPath": "django.apps",
         "description": "django.apps",
@@ -597,11 +605,35 @@
         "documentation": {}
     },
     {
+        "label": "UserChangeForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
         "label": "views",
         "importPath": "users",
         "description": "users",
         "isExtraImport": true,
         "detail": "users",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "ProfileForm",
+        "importPath": "users.forms",
+        "description": "users.forms",
+        "isExtraImport": true,
+        "detail": "users.forms",
         "documentation": {}
     },
     {
@@ -1071,6 +1103,15 @@
         "documentation": {}
     },
     {
+        "label": "ProfileForm",
+        "kind": 6,
+        "importPath": "shop.users.forms",
+        "description": "shop.users.forms",
+        "peekOfCode": "class ProfileForm(UserChangeForm):\n    class Meta:\n        model = User\n        fields = (\n            \"image\",\n            \"first_name\",\n            \"last_name\",\n            \"username\",\n            \"email\",)\n    image = forms.ImageField(required=False)",
+        "detail": "shop.users.forms",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "kind": 6,
         "importPath": "shop.users.models",
@@ -1102,7 +1143,7 @@
         "kind": 2,
         "importPath": "shop.users.views",
         "description": "shop.users.views",
-        "peekOfCode": "def login(request):\n    if request.method == 'POST':\n        form = UserLoginForm(data=request.POST)\n        if form.is_valid():\n            username = request.POST['username']\n            password = request.POST['password']\n            user = auth.authenticate(username=username, password=password)\n            if user:\n                auth.login(request, user)\n                return HttpResponseRedirect(reverse('main:index'))",
+        "peekOfCode": "def login(request):\n    if request.method == 'POST':\n        form = UserLoginForm(data=request.POST)\n        if form.is_valid():\n            username = request.POST['username']\n            password = request.POST['password']\n            user = auth.authenticate(username=username, password=password)\n            if user:\n                auth.login(request, user)\n                messages.success(request, f\"{username}, Вы вошли в аккаунт\")",
         "detail": "shop.users.views",
         "documentation": {}
     },
@@ -1111,7 +1152,7 @@
         "kind": 2,
         "importPath": "shop.users.views",
         "description": "shop.users.views",
-        "peekOfCode": "def registration(request):\n    if request.method == 'POST':\n        form = UserRegistrationForm(data=request.POST)\n        if form.is_valid():\n            form.save()\n            user = form.instance\n            auth.login(request, user)\n            return HttpResponseRedirect(reverse('main:index'))\n    else:\n        form = UserRegistrationForm()",
+        "peekOfCode": "def registration(request):\n    if request.method == 'POST':\n        form = UserRegistrationForm(data=request.POST)\n        if form.is_valid():\n            form.save()\n            user = form.instance\n            auth.login(request, user)\n            messages.success(request, f\"{user.username}, Вы успешно зарегистрированы и вошли в аккаунт\")\n            return HttpResponseRedirect(reverse('main:index'))\n    else:",
         "detail": "shop.users.views",
         "documentation": {}
     },
@@ -1120,7 +1161,7 @@
         "kind": 2,
         "importPath": "shop.users.views",
         "description": "shop.users.views",
-        "peekOfCode": "def profile(request):\n    context = {\n        'title': 'Home - Кабинет'\n    }\n    return render(request, 'users/profile.html', context)\ndef logout(request):\n    auth.logout(request)\n    return redirect(reverse('main:index'))",
+        "peekOfCode": "def profile(request):\n    if request.method == 'POST':\n        form = ProfileForm(data=request.POST, instance=request.user, files=request.FILES)\n        if form.is_valid():\n            form.save()\n            messages.success(request, \"Профиль успешно обновлен\")\n            return HttpResponseRedirect(reverse('users:profile'))\n    else:\n        form = ProfileForm(instance=request.user)\n    context = {",
         "detail": "shop.users.views",
         "documentation": {}
     },
@@ -1129,7 +1170,7 @@
         "kind": 2,
         "importPath": "shop.users.views",
         "description": "shop.users.views",
-        "peekOfCode": "def logout(request):\n    auth.logout(request)\n    return redirect(reverse('main:index'))",
+        "peekOfCode": "def logout(request):\n    messages.success(request, f\"{request.user.username}, Вы вышли из аккаунта\")\n    auth.logout(request)\n    return redirect(reverse('main:index'))",
         "detail": "shop.users.views",
         "documentation": {}
     },
