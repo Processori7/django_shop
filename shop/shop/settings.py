@@ -155,3 +155,4 @@ INTERNAL_IPS = [
 
 # Переопределяю модель пользователей
 AUTH_USER_MODEL = "users.User"
+LOGIN_URL = "/users/login"
