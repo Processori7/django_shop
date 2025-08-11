@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from debug_toolbar.toolbar import debug_toolbar_urls
+# from debug_toolbar.toolbar import debug_toolbar_urls
 from shop import settings
 from django.conf.urls.static import static
 
@@ -27,7 +27,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include('main.urls', namespace='main')), # Подключаю маршруты из приложения main
     path("catalog/", include('goods.urls', namespace='goods')), # Подключаю маршруты из приложения main
-    path("users/", include('users.urls', namespace='users')) # Подключаю маршруты из приложения users
+    path("users/", include('users.urls', namespace='users')), # Подключаю маршруты из приложения users
+    path("cart/", include('carts.urls', namespace='cart')) # Подключаю маршруты из приложения carts
 ]
 
 # Добавляем обработку статических файлов

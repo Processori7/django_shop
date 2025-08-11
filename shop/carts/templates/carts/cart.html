@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="mt-5 pt-5"><strong>Корзина</strong></h1>
+            
+            <div class="mt-4">
+                <div id="cart-items-container">
+                    <!-- Содержимое корзины -->
+                    {% include "carts/includes/included_cart.html" %}
+                    <!-- Конец содержимого корзины -->
+                </div>
+                
+                <div class="mt-4">
+                    <a class="btn btn-dark" href="#">
+                        Оформить заказ
+                    </a>
+                    <a class="btn btn-secondary" href="{% url 'main:index' %}">
+                        Продолжить покупки
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+<footer class="py-4 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Home 2025</p>
+    </div>
+</footer>
+{% endblock %}

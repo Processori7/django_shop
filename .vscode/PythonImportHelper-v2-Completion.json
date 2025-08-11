@@ -1,10 +1,90 @@
 [
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
         "isExtraImport": true,
-        "detail": "django.db",
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -48,6 +128,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -77,6 +173,150 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "carts",
+        "description": "carts",
+        "isExtraImport": true,
+        "detail": "carts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -177,150 +417,6 @@
         "documentation": {}
     },
     {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "auth",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "messages",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "reverse",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
         "label": "views",
         "importPath": "goods",
         "description": "goods",
@@ -358,54 +454,6 @@
         "description": "django.contrib.postgres.search",
         "isExtraImport": true,
         "detail": "django.contrib.postgres.search",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "get_list_or_404",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "get_object_or_404",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -511,14 +559,6 @@
         "description": "django.conf.urls.static",
         "isExtraImport": true,
         "detail": "django.conf.urls.static",
-        "documentation": {}
-    },
-    {
-        "label": "debug_toolbar_urls",
-        "importPath": "debug_toolbar.toolbar",
-        "description": "debug_toolbar.toolbar",
-        "isExtraImport": true,
-        "detail": "debug_toolbar.toolbar",
         "documentation": {}
     },
     {
@@ -668,6 +708,69 @@
         "description": "other_files.goods_list",
         "peekOfCode": "goods = [\n        {'image': 'deps/images/goods/set of tea table and three chairs.jpg',\n         'name': 'Чайный столик и три стула',\n         'description': 'Комплект из трёх стульев и дизайнерский столик для гостинной комнаты.',\n         'price': 150.00},\n         {'image': 'deps/images/goods/set of tea table and two chairs.jpg',\n         'name': 'Чайный столик и два стула',\n         'description': 'Набор из стола и двух стульев в минималистическом стиле.',\n         'price': 93.00},\n         {'image': 'deps/images/goods/double bed.jpg',",
         "detail": "other_files.goods_list",
+        "documentation": {}
+    },
+    {
+        "label": "CartsConfig",
+        "kind": 6,
+        "importPath": "shop.carts.apps",
+        "description": "shop.carts.apps",
+        "peekOfCode": "class CartsConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"carts\"",
+        "detail": "shop.carts.apps",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "shop.carts.urls",
+        "description": "shop.carts.urls",
+        "peekOfCode": "app_name = 'carts'\nurlpatterns = [\n    path('', views.cart_detail, name='cart_detail'),  # Страница корзины\n    path('cart_add/<int:product_id>/', views.cart_add, name='cart_add'),\n    path('cart_change/<int:product_id>/', views.cart_change, name='cart_change'),\n    path('cart_delete/<int:product_id>/', views.cart_delete, name='cart_delete'),\n]",
+        "detail": "shop.carts.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "shop.carts.urls",
+        "description": "shop.carts.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.cart_detail, name='cart_detail'),  # Страница корзины\n    path('cart_add/<int:product_id>/', views.cart_add, name='cart_add'),\n    path('cart_change/<int:product_id>/', views.cart_change, name='cart_change'),\n    path('cart_delete/<int:product_id>/', views.cart_delete, name='cart_delete'),\n]",
+        "detail": "shop.carts.urls",
+        "documentation": {}
+    },
+    {
+        "label": "cart_detail",
+        "kind": 2,
+        "importPath": "shop.carts.views",
+        "description": "shop.carts.views",
+        "peekOfCode": "def cart_detail(request):\n    \"\"\"Отображение страницы корзины\"\"\"\n    return render(request, 'carts/cart.html')\ndef cart_add(request, product_id):\n    ...\ndef cart_change(request, product_id):\n    ...\ndef cart_delete(request, product_id):\n    ...",
+        "detail": "shop.carts.views",
+        "documentation": {}
+    },
+    {
+        "label": "cart_add",
+        "kind": 2,
+        "importPath": "shop.carts.views",
+        "description": "shop.carts.views",
+        "peekOfCode": "def cart_add(request, product_id):\n    ...\ndef cart_change(request, product_id):\n    ...\ndef cart_delete(request, product_id):\n    ...",
+        "detail": "shop.carts.views",
+        "documentation": {}
+    },
+    {
+        "label": "cart_change",
+        "kind": 2,
+        "importPath": "shop.carts.views",
+        "description": "shop.carts.views",
+        "peekOfCode": "def cart_change(request, product_id):\n    ...\ndef cart_delete(request, product_id):\n    ...",
+        "detail": "shop.carts.views",
+        "documentation": {}
+    },
+    {
+        "label": "cart_delete",
+        "kind": 2,
+        "importPath": "shop.carts.views",
+        "description": "shop.carts.views",
+        "peekOfCode": "def cart_delete(request, product_id):\n    ...",
+        "detail": "shop.carts.views",
         "documentation": {}
     },
     {
@@ -1062,7 +1165,7 @@
         "kind": 5,
         "importPath": "shop.shop.urls",
         "description": "shop.shop.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include('main.urls', namespace='main')), # Подключаю маршруты из приложения main\n    path(\"catalog/\", include('goods.urls', namespace='goods')), # Подключаю маршруты из приложения main\n    path(\"users/\", include('users.urls', namespace='users')) # Подключаю маршруты из приложения users\n]\n# Добавляем обработку статических файлов\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])\nif settings.DEBUG:\n    import debug_toolbar",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include('main.urls', namespace='main')), # Подключаю маршруты из приложения main\n    path(\"catalog/\", include('goods.urls', namespace='goods')), # Подключаю маршруты из приложения main\n    path(\"users/\", include('users.urls', namespace='users')), # Подключаю маршруты из приложения users\n    path(\"cart/\", include('carts.urls', namespace='cart')) # Подключаю маршруты из приложения carts\n]\n# Добавляем обработку статических файлов\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])\nif settings.DEBUG:",
         "detail": "shop.shop.urls",
         "documentation": {}
     },
@@ -1134,7 +1237,7 @@
         "kind": 5,
         "importPath": "shop.users.urls",
         "description": "shop.users.urls",
-        "peekOfCode": "app_name = 'users'\nurlpatterns = [\n    path('login/', views.login, name='login'),\n    path('registration/', views.registration, name='registration'),\n    path('profile/', views.profile, name='profile'),\n    path('logout/', views.logout, name='logout'),\n]",
+        "peekOfCode": "app_name = 'users'\nurlpatterns = [\n    path('login/', views.login, name='login'),\n    path('registration/', views.registration, name='registration'),\n    path('profile/', views.profile, name='profile'),\n    path('logout/', views.logout, name='logout'),\n    path('users-cart/', views.users_cart, name='users-cart'),\n]",
         "detail": "shop.users.urls",
         "documentation": {}
     },
@@ -1143,7 +1246,7 @@
         "kind": 5,
         "importPath": "shop.users.urls",
         "description": "shop.users.urls",
-        "peekOfCode": "urlpatterns = [\n    path('login/', views.login, name='login'),\n    path('registration/', views.registration, name='registration'),\n    path('profile/', views.profile, name='profile'),\n    path('logout/', views.logout, name='logout'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('login/', views.login, name='login'),\n    path('registration/', views.registration, name='registration'),\n    path('profile/', views.profile, name='profile'),\n    path('logout/', views.logout, name='logout'),\n    path('users-cart/', views.users_cart, name='users-cart'),\n]",
         "detail": "shop.users.urls",
         "documentation": {}
     },
@@ -1179,7 +1282,16 @@
         "kind": 2,
         "importPath": "shop.users.views",
         "description": "shop.users.views",
-        "peekOfCode": "def logout(request):\n    messages.success(request, f\"{request.user.username}, Вы вышли из аккаунта\")\n    auth.logout(request)\n    return redirect(reverse('main:index'))",
+        "peekOfCode": "def logout(request):\n    messages.success(request, f\"{request.user.username}, Вы вышли из аккаунта\")\n    auth.logout(request)\n    return redirect(reverse('main:index'))\ndef users_cart(request):\n     return render(request, 'users/users_cart.html')",
+        "detail": "shop.users.views",
+        "documentation": {}
+    },
+    {
+        "label": "users_cart",
+        "kind": 2,
+        "importPath": "shop.users.views",
+        "description": "shop.users.views",
+        "peekOfCode": "def users_cart(request):\n     return render(request, 'users/users_cart.html')",
         "detail": "shop.users.views",
         "documentation": {}
     },
