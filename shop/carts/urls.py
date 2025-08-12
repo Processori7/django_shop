@@ -6,7 +6,7 @@ app_name = 'carts'
 
 urlpatterns = [
     path('', views.cart_detail, name='cart_detail'),  # Страница корзины
-    path('cart_add/<int:product_id>/', views.cart_add, name='cart_add'),
-    path('cart_change/<int:product_id>/', views.cart_change, name='cart_change'),
-    path('cart_delete/<int:product_id>/', views.cart_delete, name='cart_delete'),
+    path('cart_add/<slug:product_slug>/', views.cart_add, name='cart_add'),
+    path('cart_change/<slug:product_slug>/', views.cart_change, name='cart_change'),
+    path('cart_delete/<slug:product_slug>/', views.cart_delete, name='cart_delete'),
 ]
